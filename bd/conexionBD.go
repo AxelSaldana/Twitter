@@ -8,6 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+/*MongoCN es el objeto de conexion a la BD*/
 var MongoCN = ConectarBD()
 var clientOptions = options.Client().ApplyURI("mongodb+srv://axel:123456789@twitter.acy6k.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
@@ -30,7 +31,7 @@ func ConectarBD() *mongo.Client {
 
 /*Chequeo connection es el ping de la BD */
 func ChequeoConnection() int {
-	err := client.Ping(context.TODO(), nil)
+	err := MongoCN.Ping(context.TODO(), nil)
 	if err != nil {
 		return 0
 	}
