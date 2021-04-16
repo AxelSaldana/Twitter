@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/Forest24/Twitter/bd"
-	"github.com/Forest24/Twitter/jwt"
+	//"github.com/Forest24/Twitter/jwt"
 	"github.com/Forest24/Twitter/models"
 )
 
