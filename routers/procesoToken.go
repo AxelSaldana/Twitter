@@ -20,7 +20,7 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	miClave := []byte("SomosLosMejoresDe_Upslp24")
 	claims := &models.Claim{}
 
-	splitToken := strings.Split(tk, "ey")
+	splitToken := strings.Split(tk, "")
 	if len(splitToken) != 2 {
 		return claims, false, string(""), errors.New("formato de token invalido")
 	}
