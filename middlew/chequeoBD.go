@@ -1,8 +1,7 @@
 package middlew
 
 import (
-	"net/http"
-
+	"net/http
 	"github.com/Forest24/Twitter/bd"
 )
 
