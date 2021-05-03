@@ -19,7 +19,7 @@ var IDUsuario string
 func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	miClave := []byte("MastersdelDesarrollo_grupodeFacebook")
 	claims := &models.Claim{}
-	splitToken := strings.Split(tk, "")
+	splitToken := strings.Split(tk, "Bearer")
 	if len(splitToken) != 2 {
 		return claims, false, string(""), errors.New("formato de token invalido")
 	}
