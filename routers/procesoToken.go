@@ -1,7 +1,9 @@
 package routers
+
 import (
 	"errors"
 	"strings"
+
 	"github.com/Forest24/Twitter/bd"
 	"github.com/Forest24/Twitter/models"
 	jwt "github.com/dgrijalva/jwt-go"
@@ -9,13 +11,15 @@ import (
 
 /*Email valor de Email usado en todos los EndPoints */
 var Email string
+
 /*IDUsuario es el ID devuelto del modelo, que se usará en todos los EndPoints */
 var IDUsuario string
+
 /*ProcesoToken proceso token para extraer sus valores */
 func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
-	miClave := []byte("SomosLosMejoresDe_Upslp24")
+	miClave := []byte("MastersdelDesarrollo_grupodeFacebook")
 	claims := &models.Claim{}
-	splitToken := strings.Split(tk,"")
+	splitToken := strings.Split(tk, "")
 	if len(splitToken) != 2 {
 		return claims, false, string(""), errors.New("formato de token invalido")
 	}
